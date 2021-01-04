@@ -68,6 +68,39 @@ $(window).on('load', function() {
 			}
 		}
 	});
+	//category carousel
+	$('.cat-category').owlCarousel({
+		loop: false,
+		nav: false,
+		dots: false,
+		mouseDrag: true,
+		stagePadding: 0,
+		items: 5,
+		autoplay: false,
+		autoWidth: true,
+		navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
+		margin: 10,
+		responsive:{
+			0:{
+				items:2,
+				nav:true
+			},
+			600:{
+				items:3,
+				nav:true
+			},
+			1000:{
+				items:8,
+				nav:true,
+				loop:false
+			},
+			1500:{
+				items:5,
+				nav:true,
+				loop:false
+			}
+		}
+	});
 	$('.hero-slider').owlCarousel({
 		loop: true,
 		nav: true,
@@ -205,11 +238,11 @@ $(window).on('load', function() {
 		pauseOnHover: true
 	});
 //filter
-	$('.grid').masonry({
-		// options
-		itemSelector: '.grid-item',
-		percentPosition: true
-	});
+	// $('.grid').masonry({
+	// 	// options
+	// 	itemSelector: '.grid-item',
+	// 	percentPosition: true
+	// });
 	//scroll to section
 	$(document).on('click', 'a.scroll[href^="#"]', function(e) {
 		// target element id
